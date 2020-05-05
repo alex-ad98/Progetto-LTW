@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <meta name="author" content="Alessandro De Vitis">
+    <meta name="author" content="Tommaso Ercoli">
+    <title>NOME-PIZZERIA | Iscrizione</title>
+    <script type="text/javascript" lang="javascript" src="scriptIscrizione.js"></script>
+</head>
+
+<body>
+    <!-- Barra Navigazione --> <!--DA COMPLETARE-->
+    <nav>
+        <div>
+            <ul>
+                <li class="">
+                    <a href="">Men&ugrave;</a>
+                </li>
+                <li class="">
+                    <a href="">Prenota</a>
+                </li>
+                <li class="">
+                    <a href="">Quanto spenderai?</a>
+                </li>
+                <li class="">
+                    <a href="">Accedi</a>
+                </li>
+                <li class="">
+                    <a href="">Iscriviti</a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+
+    <form action="" method="POST" name="formIscrizione" onSubmit="return validaFormIscrizione()">
+        <input type="email" name="inputEmail" placeholder="Indirizzo Email" required autofocus> *<br>
+        <input type="password" name="inputPassword" placeholder="Password" required> *<br>
+        <input type="password" name="checkPassword" placeholder="Conferma Password" required> *<br>
+        <input type="text" name="nome" placeholder="Nome e Cognome"> <br>
+        <input type="text" name="telefono" placeholder="Telefono" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
+        <input type="submit" name="submit" value="Iscriviti"> 
+        <input type="reset" name="reset">
+    </form>
+    <span class="">I campi contrassegnati da </span><span id="">*</span><span class="">sono obbligatori</span>
+    
+</body>
+
+</head>
