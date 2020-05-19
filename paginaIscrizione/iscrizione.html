@@ -7,43 +7,76 @@
     <meta name="author" content="Tommaso Ercoli">
     <title>NOME-PIZZERIA | Iscrizione</title>
     <script type="text/javascript" lang="javascript" src="scriptIscrizione.js"></script>
+    <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
+    <style>
+        
+        body{
+            background-image: url('../immagini/pizza5.jpg');
+            background-repeat: no-repeat;
+            background-size:cover ;
+        }
+        
+    </style>
 </head>
 
-<body>
+<body class="text-center">
     <!-- Barra Navigazione --> <!--DA COMPLETARE-->
-    <nav>
-        <div>
-            <ul>
-                <li class="">
-                    <a href="">Men&ugrave;</a>
-                </li>
-                <li class="">
-                    <a href="">Prenota</a>
-                </li>
-                <li class="">
-                    <a href="">Quanto spenderai?</a>
-                </li>
-                <li class="">
-                    <a href="">Accedi</a>
-                </li>
-                <li class="">
-                    <a href="">Iscriviti</a>
-                </li>
-    
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
 
-    <form action="" method="POST" name="formIscrizione" onSubmit="return validaFormIscrizione()">
-        <input type="email" name="inputEmail" placeholder="Indirizzo Email" required autofocus> *<br>
-        <input type="password" name="inputPassword" placeholder="Password" required> *<br>
-        <input type="password" name="checkPassword" placeholder="Conferma Password" required> *<br>
-        <input type="text" name="nome" placeholder="Nome e Cognome"> <br>
-        <input type="text" name="telefono" placeholder="Telefono" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
-        <input type="submit" name="submit" value="Iscriviti"> 
-        <input type="reset" name="reset">
-    </form>
-    <span class="">I campi contrassegnati da </span><span id="">*</span><span class="">sono obbligatori</span>
+            
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaLogin/login.html">Accedi</a>
+          </li>
+          
+        </ul>
+      
+      </nav>
+    <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+    <div class="container-fluid rounded p-3 my-3 bg-dark text-white">
+      <h3>Iscriviti ora al nostro sito</h3>
+        <form class="form-signin"action="" method="POST" id="signup" name="formIscrizione" onSubmit="return validaFormIscrizione()">
+            
+            <label for="email">* Indirizzo Email:</label><br>
+            <input type="email" id="email" name="inputEmail" placeholder="Inserisci Email" class="form-control" required autofocus>
+            <label for="password">* Password:</label><br>
+            <input type="password" id="password" name="inputPassword" placeholder="Inserisci Password" class="form-control" required>
+            <input type="password" id="checkpsw" name="checkPassword" placeholder="Conferma Password" class="form-control" required> 
+            <label for="name">* Nome:</label><br>
+            <input type="text" name="nome" id="name" placeholder="Inserisci Nome" class="form-control"> <br>
+            <label for="surname">* Cognome:</label><br>
+            <input type="text" name="cognome" id="surname" placeholder="Inserisci Cognome" class="form-control"> <br>
+            <label for="tel">Telefono:</label><br>
+            <input type="text" name="telefono" id="tel" placeholder="Inserisci Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
+            <div class="btn-group">
+            <button class="btn btn-info" type="submit">Iscriviti</button>
+            </div>
+            <div class="btn-group">
+            <button class="btn btn-danger" type="reset">Reimposta</button>
+            </div>
+            <p>I campi contrassegnati da * sono obbligatori</p>
+                   
+        </form>
+    </div>
+    </div>
+    </div>
+    
     
 </body>
 
