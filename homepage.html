@@ -1,107 +1,71 @@
 <!DOCTYPE html>
 
-<html lang="it">
+  <html lang="it">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1">
-        <meta name="author" content="Alessandro De Vitis"> 
-        <meta name="author" content="Tommaso Ercoli">
-        <link rel="stylesheet" href="./bootstrap-4.3.1/css/bootstrap.min.css">
-        <title>NOME-PIZZERIA | Home Page</title>  <!--scegliere il nome-->
-
-        <style>
-            .mapouter {
-                position: relative;
-                text-align: right;
-                height: 310px;
-                width: 400px;
-                padding-top: 20px;
-                
-            }
-            .gmap_canvas {
-                overflow: hidden;
-                
-                background: none !important;
-                height: 310px;
-                width: 400px;
-            }
-        
-            body{
-                background-image: url('./immagini/pizza3.jpg');
-                background-repeat: no-repeat;
-                background-size:cover ;
-            }
-            #titolo{
-              text-align: center;
-              color: rgb(255, 255, 255);
-            }
-
-            #text1{
-              color:white;
-            }      
-            .row{
-              background-color: rgb(97, 102, 102, 0.5);
-              
-            }
-             
-        </style>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width-device-width, initial-scale=1">
+      <meta name="author" content="Alessandro De Vitis">
+      <meta name="author" content="Tommaso Ercoli">
+      <link rel="icon" href="../immagini/logo_sapienza.ico"/> <!--icona sapienza affianco al titolo (bookmark)-->
+      <link rel="stylesheet" href="./bootstrap-4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="stili.css" lang="css" type="text/css">
+      <title>NOME-PIZZERIA | Home Page</title>  <!--scegliere il nome-->
     </head>
 
     <body>
-        
-        <!-- Barra Navigazione --> <!--DA COMPLETARE-->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+      <!-- Barra Navigazione --> <!--DA COMPLETARE-->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./paginaMenu/menu.html">Men&ugrave;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./paginaPrenota/prenota.html">Prenota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./paginaSpesa/spesa.html">Quanto spenderai?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./paginaLogin/login.html">Accedi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./paginaIscrizione/iscrizione.html">Iscriviti</a>
+          </li>
+        </ul>
+      </nav>
 
-            
-
-            <!-- Links -->
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="./paginaMenu/menu.html">Men&ugrave;</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./paginaPrenota/prenota.html">Prenota</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./paginaSpesa/spesa.html">Quanto spenderai?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./paginaLogin/login.html">Accedi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./paginaIscrizione/iscrizione.html">Iscriviti</a>
-              </li>
-            </ul>
-          
-          </nav>
-        
-        <div id="titolo"><h1 >NOME-PIZZERIA</h1>
+      <div id="titolo"><h1 >NOME-PIZZERIA</h1>
         <h3>Benvenuti sul sito web di NOME-PIZZERIA, la tua Pizzeria di fiducia alla Sapienza</h3><br>
-        </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-              <div class="col-sm-4" id="text1" >
-                <div class="container-fluid rounded p-3 my-3 bg-transparent text-white">
-                  <h3>Vieni a trovarci</h3>
-                  <h4>Ci troviamo in Viale dello Scalo S. Lorenzo, 82-88, 00159 Roma RM, Italia </h4>
-                  <h4>Siamo aperti tutti i giorni a pranzo e a cena</h4>
-                  <h3>Contatti</h3>
-                  <h4>email: asjkdsadsa@sdfg.com </h4>
-                  <h4>Telefono 0696969696 </h4>
-                </div>
-              </div>
-        
-            <div class="col-sm-4">
-              <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="400" height="310" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=Sapienza%20Universit%C3%A0%20di%20Roma%20-+Ex-Poste&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="100px" marginwidth="0">
-                    </iframe> 
-                </div>
-              </div>
-            </div>  <!--AGGIUSTARE IL CSS PER CON LE DIMENSIONI ADATTE DOPO AVER IMPLEMENTATO IL RESTO DELLA PAGINA-->
-        </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4" id="text1" >
+      <div class="container-fluid rounded p-3 my-3 bg-transparent text-white">
+        <h3 class="sottotitolo">Vieni a trovarci</h3> 
+        <h5>Ci troviamo in Viale dello Scalo S. Lorenzo, 82-88, 00159 Roma RM, Italia </h5>
+        <h5>Siamo aperti tutti i giorni a pranzo e a cena</h5>
+        <h3 class="sottotitolo">Contatti</h3>
+        <h5>e-mail: NOME-PIZZERIA@gmail.com</h5> <!--Dopo aver scelto il nome cambiare e creare effettivamente l'indirizzo email-->
+        <h5>Telefono: 06 96969696 </h5>
+      </div>
+      </div>
 
-     </body>
-</html>
+      <div class="col-sm-4">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="400" height="310" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Sapienza%20Universit%C3%A0%20di%20Roma%20-+Ex-Poste&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" scrolling="no" marginheight="100px" marginwidth="0">
+            </iframe>
+          </div>
+        </div>
+      </div>   
+      </div>
+      </div>
+      
+
+
+    </body>
+  </html>

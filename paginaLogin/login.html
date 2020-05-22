@@ -1,63 +1,62 @@
 <!DOCTYPE html>
-<html>
+
+  <html lang="it">
+
     <head>
-        <title>NOME-PIZZERIA | Login</title>
-        <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1">
-    <meta name="author" content="Alessandro De Vitis">
-    <meta name="author" content="Tommaso Ercoli">
-    <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
-    <style>
+      <title>NOME-PIZZERIA | Accedi</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width-device-width, initial-scale=1">
+      <meta name="author" content="Alessandro De Vitis">
+      <meta name="author" content="Tommaso Ercoli">
+      <link rel="icon" href="../immagini/logo_sapienza.ico" />
+      <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
+      <script type="text/javascript" lang="javascript" src="scriptLogin.js"></script>
+      <style>
         body{
-                background-image: url('../immagini/pizza6.jpg');
-                background-repeat: no-repeat;
-                background-size:cover ;
-            }
-    </style>
+          background-image: url('../immagini/pizza6.jpg');
+          background-repeat: no-repeat;
+          background-size:cover ;
+        }
+      </style>
     </head>
+
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-
-            
-
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../homepage.html">Home</a>
-                  </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
-              </li>
-            </ul>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
+          </li>
+        </ul>    
+      </nav>
           
-          </nav>
-          
-          <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-4">
-            <div class="container-fluid rounded p-3 my-3 bg-dark text-white">
-              <h3>Effettua l'accesso</h3>
-                <form class="form-signin"action="" method="POST" id="signup" name="formIscrizione" onSubmit="return validaFormIscrizione()">
-                    
-                    <label for="email">Indirizzo Email:</label><br>
-                    <input type="email" id="email" name="inputEmail" placeholder="Inserisci Email" class="form-control" required autofocus>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="inputPassword" placeholder="Inserisci Password" class="form-control" required><br>
-
-                    <button class="btn btn-md btn-block btn-info" type="submit">Log In</button>
-                                              
-                </form>
-            </div>
-            </div>
-            </div>
+      <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
+      <div class="container-fluid rounded p-3 my-3 bg-dark text-white">
+      <h3>Effettua l'accesso</h3>
+      <form class="form-signin"action="" method="POST" id="signup" name="formIscrizione" onSubmit="return validaLogin()">              
+        <label for="email">Indirizzo Email:</label><br>
+        <input type="email" id="email" name="inputEmail" placeholder="Inserisci Email" class="form-control" required autofocus>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="inputPassword" placeholder="Inserisci Password" class="form-control" required><br>
+        <button class="btn btn-md btn-block btn-info" type="submit">Log In</button>                                        
+      </form>
+      </div>
+      </div>
+      </div>
     </body>
-</html>
+    
+  </html>

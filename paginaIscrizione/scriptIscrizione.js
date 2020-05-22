@@ -5,6 +5,6 @@ function validaFormIscrizione(){
         document.formIscrizione.checkPassword.value = "";
         return false;
     }
-    alert("Dati inseriti corretamente"); //Valutare se mantenerlo o toglierlo 
+    alert("Registrazione effettuata correttamente"); //Valutare se mantenerlo o toglierlo 
     return true;
 }

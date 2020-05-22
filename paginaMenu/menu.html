@@ -1,86 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <head>
         <title>NOME-PIZZERIA | Men&ugrave;</title>
         <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1">
-    <meta name="author" content="Alessandro De Vitis">
-    <meta name="author" content="Tommaso Ercoli">
-    <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
-    <style>
-        #titolo{
-            text-align: center;
-            color: rgb(255, 255, 255);
-        }
-        body{
-            background-image: url('../immagini/ristorante.jpg');
-            background-repeat: no-repeat;
-            background-size:cover ;
-        }
-        #zonaDinamica{
-            text-align: center;
-            color: white;
-        }
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="author" content="Alessandro De Vitis">
+        <meta name="author" content="Tommaso Ercoli">
+        <link rel="icon" href="../immagini/logo_sapienza.ico" />
+        <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#zonaDinamica").load(this.name + ".html");
+                });        
+            });
+        </script>
+        <!--<script>
+                    var documenti = document.getElementsByTagName("button");
+                    for (var i = 0; i < documenti.length; i++) {
+                        documenti[i].onclick = caricaDocumento;
+                    }
+                    function caricaDocumento(e) {
+                        var httpRequest = new XMLHttpRequest();
+                        httpRequest.onreadystatechange = gestisciResponse;
+                        httpRequest.open("GET", e.target.innerHTML + ".html", true);
+                        httpRequest.send();
+                    }
+                    function gestisciResponse(e){
+                        if (e.target.readyState == XMLHttpRequest.DONE && e.target.status = 200) {
+                            document.getElementById("zonaDinamica").innerHTML = e.target.responseText;
+                        }
+                    }
+
+                SCRIPT DA RIMUOVERE, SOSTITUITO CON EQUIVALENTE IN JQUERY
+                </script>-->
+
+        <style>
+            #titolo {
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
         
-    </style>
-    
+            body {
+                background-image: url('../immagini/ristorante.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        
+            #zonaDinamica {
+                text-align: center;
+                color: white;
+            }
+        </style>
     </head>
+
     <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-
-            
-
             <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="../homepage.html">Home</a>
-                  </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
-              </li>
-            </ul>
-          
-          </nav>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
+                </li>
+            </ul>  
+        </nav>
 
         <div id="titolo"><h1 >Men&ugrave;</h1>
-            <h3>Ecco la nostra offerta</h3><br>
+            <h3>Questo è il men&ugrave offerto nella nostra pizzeria</h3><br>
         </div>
+
         <div class="text-center">
-            <button class="btn btn-dark" ><h2>Antipasti</h2></button>
-            <button class="btn btn-dark"><h2>Pizze</h2></button>
-            <button class="btn btn-dark"><h2>Bevande</h2></button>
-            
+            <button class="btn btn-dark" name="Antipasti"><h2>Antipasti</h2></button>
+            <button class="btn btn-dark" name="Pizze"><h2>Pizze</h2></button>
+            <button class="btn btn-dark" name="Bevande"><h2>Bevande</h2></button>   
         </div>
-            <hr>
-            <div id="zonaDinamica">
-            Seleziona il documento da visualizzare
-            </div>
-
-            <script>
-                var documenti = document.getElementsByTagName("button");
-                for (var i = 0; i < documenti.length ; i++){
-                    documenti[i].onclick = caricaDocumento;
-                }
-                function caricaDocumento(e){
-                    var httpRequest = new XMLHttpRequest;
-                    httpRequest.onreadystatechange = gestisciResponse;
-                    httpRequest.open("GET", e.target.innerHTML+".html", true);
-                    httpRequest.send();
-                }
-                function gestisciResponse(e){
-                    if(e.target.readyState == 4 && e.target.status == 200){
-                        document.getElementById("zonaDinamica").innerHTML = 
-                        e.target.responseText ;
-                    }
-                }
-            </script>
-
+        <hr>
+        <div id="zonaDinamica"></div>         
     </body>
 </html>

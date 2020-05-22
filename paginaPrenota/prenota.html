@@ -1,35 +1,80 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="it">
     <head>
         <title>NOME-PIZZERIA | Prenota</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <meta name="author" content="Alessandro De Vitis">
         <meta name="author" content="Tommaso Ercoli">
+        <link rel="icon" href="../immagini/logo_sapienza.ico" />
         <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
+        <style>
+          body{
+            background-image: url('../immagini/pizza1.jpg');
+            background-repeat: no-repeat;
+            background-size:cover ;
+          }
+          .asterisco{
+            color:red;
+          }
+        </style>
+        <script type="text/javascript" lang="javascript" src="scriptPrenotazione.js"></script>
     </head>
+
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-
-            
-
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../homepage.html">Home</a>
-                  </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
-              </li>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
+          </li>
               
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
-              </li>
-            </ul>
-          
-          </nav>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h3>Prenota il tuo tavolo</h3>
+      <form class="form-signin" action="" method="POST" name="formPrenotazione" onSubmit="return validaFormPrenotazione()">
+        <label for="date">
+          <span class="asterisco">*</span> Data:
+        </label>
+        <input type="date" name="data" required>
+        <label for="ora">
+          <span class="asterisco">*</span> Ora:
+        </label>
+        <input type="time" name="ora" required>
+        <br>
+        <label for="numeroPosti">
+          Quante persone?
+        </label>
+        <input type="number" name="numeroPosti" required>
+        <br>
+        <label for="nome e cognome">
+          <span class="asterisco">*</span> Nome e Cognome:
+        </label><br>
+        <input type="text" name="nome e cognome" id="name" placeholder="Inserisci il tuo Nome e il tuo Cognome" class="form-control" autofocus required>
+        <label for="tel">Telefono:</label><br>
+        <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
+        <label for="email">Indirizzo Email:</label><br>
+        <input type="email" id="email" name="inputEmail" placeholder="Inserisci un indirizzo Email" class="form-control">
+        <div class="btn-group">
+          <button class="btn btn-info" type="submit">Prenota</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-danger" type="reset">Reimposta</button>
+        </div>
+        <p>I campi contrassegnati da <span class="asterisco">*</span> sono obbligatori</p>
+      
+      </form>
+      
     </body>
 </html>
