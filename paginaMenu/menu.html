@@ -16,26 +16,7 @@
                 });        
             });
         </script>
-        <!--<script>
-                    var documenti = document.getElementsByTagName("button");
-                    for (var i = 0; i < documenti.length; i++) {
-                        documenti[i].onclick = caricaDocumento;
-                    }
-                    function caricaDocumento(e) {
-                        var httpRequest = new XMLHttpRequest();
-                        httpRequest.onreadystatechange = gestisciResponse;
-                        httpRequest.open("GET", e.target.innerHTML + ".html", true);
-                        httpRequest.send();
-                    }
-                    function gestisciResponse(e){
-                        if (e.target.readyState == XMLHttpRequest.DONE && e.target.status = 200) {
-                            document.getElementById("zonaDinamica").innerHTML = e.target.responseText;
-                        }
-                    }
-
-                SCRIPT DA RIMUOVERE, SOSTITUITO CON EQUIVALENTE IN JQUERY
-                </script>-->
-
+        
         <style>
             #titolo {
                 text-align: center;
