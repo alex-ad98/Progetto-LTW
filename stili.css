@@ -15,11 +15,14 @@
 
 
 .page-footer::after{
+    width: 100%;
     
-    
-    color: black;
+    color: white;
     content: "copyright - autori: Tommaso e Alessandro - proggetto pratico linguaggi e tecnologie per il web";
     
+}
+#footer{
+    background-color:rgba(78, 85, 85, 0.85) ;
 }
 
 #titolo{
