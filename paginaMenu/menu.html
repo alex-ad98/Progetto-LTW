@@ -14,6 +14,7 @@
             $(document).ready(function(){
                 $("button").click(function(){
                     $("#zonaDinamica").load(this.name + ".html");
+                    $("#footer").hide();
                 });        
             });
         </script>
@@ -40,6 +41,7 @@
             #sottotitolo{
                 background-color: rgb(97, 102, 102, 0.70);
             }
+            
         </style>
     </head>
 
@@ -77,8 +79,8 @@
             <button class="btn btn-dark" name="Bevande"><h2>Bevande</h2></button>   
         </div>
         <hr>
-        <div id="zonaDinamica"></div>     
+        <div id="zonaDinamica" ></div>     
         
-        <footer></footer>
+        <div class="page-footer fixed-bottom text-center " id="footer"></div>
     </body>
 </html>

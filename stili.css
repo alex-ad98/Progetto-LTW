@@ -14,15 +14,10 @@
 }
 
 
-footer::after{
-    position: relative;
+.page-footer::after{
     
-    bottom:0;
-    width:100%;
-    display:block;
-    text-align: center;
-    background-color: rgba(78, 85, 85, 0.65);
-    color: white;
+    
+    color: black;
     content: "copyright - autori: Tommaso e Alessandro - proggetto pratico linguaggi e tecnologie per il web";
     
 }
