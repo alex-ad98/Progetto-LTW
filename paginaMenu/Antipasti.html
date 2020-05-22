@@ -11,43 +11,89 @@
     <title>NOME-PIZZERIA | Antipasti</title>
     <h1>Antipasti</h1>
     <style>
-        .row {
-            background-color: rgb(97, 102, 102, 0.85);
-        }
+        #container_principale {
+                background-color: rgb(97, 102, 102, 0.85);
+            }
 
         #photo {
             border-radius: 20px;
             padding: 10px;
         }
+        .categoria{
+                text-align: left;
+                padding-left: 2%;
+                color: rgb(15, 15, 15);
+            }
+            hr{
+                border-width :10px;
+            }
     </style>
   
 </head>
 <body>
-    <div class="row">
-        <div class="col-sm-2"></div>
-          <div class="col-sm-4" id="text1" >
-            <div class="container-fluid rounded p-3 my-3 bg-transparent text-white">
-            <ul>
-                <li><h3>Patatine fritte</h3></li>
-                <li><h3>Supplì</h3></li>
-                <li><h3>Bruschette miste</h3></li>
-                <li><h3>Tagliere salumi</h3></li>
-                <li><h3>Fritto misto</h3></li>
-            </ul>
-            </div>
-          </div>
-        <div class="col-sm-1">
-            <!--Prezzi bevande-->
+    <div id="container_principale">
+    <h2 class="categoria">Antipasti:</h2>
+    <!--inizio row-->
+    <div class="row pt-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <h6>Patatine</h6>
         </div>
-        <div class="col-sm-4">
-          <div >
-            
-                <img src="../immagini/patatine.jpg" height="300px" width="400px" id="photo"> 
-            
-          </div>
-        </div>  <!--AGGIUSTARE IL CSS PER CON LE DIMENSIONI ADATTE DOPO AVER IMPLEMENTATO IL RESTO DELLA PAGINA-->
+        <div class="col-sm-2">
+            <h6>Supplì</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>Bruschette</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>Tagliere</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>Fritto misto</h6>
+        </div>
     </div>
-
+    <!--fine row-->
     
+     <!--inizio row-->
+     <div class="row pt-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <img src="../immagini/patatine.jpg" alt="Patatine" height="140px" width="160px">
+        </div>
+        <div class="col-sm-2">
+            <img src="../immagini/suppli.png" alt="Supplì" height="140px" width="160px">
+        </div>
+        <div class="col-sm-2">
+            <img src="../immagini/bruschetta.png" alt="Bruschette" height="140px" width="140px">
+        </div>
+        <div class="col-sm-2">
+            <img src="../immagini/tagliere.png" alt="Tagliere" height="100px" width="160px" style="position: relative;top: 30px;">
+        </div>
+        <div class="col-sm-2">
+            <img src="../immagini/fritti.png" alt="Fritto misto" height="120px" width="200px" style="position: relative;top:20px;">
+        </div>
+    </div>
+    <!--fine row-->
+    <!--inizio row-->
+    <div class="row pt-2">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <h6>3€</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>1,50€</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>2€</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>6€</h6>
+        </div>
+        <div class="col-sm-2">
+            <h6>5€</h6>
+        </div>
+    </div>
+    <!--fine row-->
+</div>
 </body>
 </html>
