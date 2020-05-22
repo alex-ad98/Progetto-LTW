@@ -11,7 +11,7 @@
         <title>NOME-PIZZERIA | Bevande</title>
         <h1>Bevande</h1>
         <style>
-            .row{
+            #container_principale{
                 background-color: rgb(97, 102, 102, 0.85);
             }
             #photo{
@@ -19,105 +19,168 @@
                 padding: 10px;
             }
             .categoria{
-                color:red;
+                color:rgb(15,15,15);
+                padding-left: 2%;
             }
         </style>
     </head>
-    <body>
-        <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-4" id="text1" >
-        <div class="container-fluid rounded p-3 my-3 bg-transparent text-white">
-        <h2 align=left class="categoria">Acqua:</h2>
-        <div name="acqua">
-            <ol>
-                <li>Acqua Liscia:
-                    <ul>2L: €1,00</ul>
-                    <ul>1L: €0,50</ul>
-                    <ul>0,5L: €0,30</ul>
-                </li> 
-                <li>Acqua Frizzante:
-                    <ul>2L:€1,50</ul>
-                    <ul>1L: €0,80</ul>
-                    <ul>0,5L: €0,50</ul>
-                </li>                
-            </ol>            
-        </div>
-        <h2 align = left class="categoria">Bevande Gassate:</h2>  
-        <table name="bevande_gassate" >
-            <tr>
-                <td><img src="../immagini/logo_coca_cola.jpg" height="130px" width="130px" alt="Coca Cola"></td> 
-                <td>Coca-Cola 
-                    <ol>
-                        <li>Lattina 0,33L: €0,60</li>
-                        <li>Bottiglia 2L: €2,00</li>                        
-                    </ol>
-                </td>
-                <td><img src="../immagini/logo_fanta.jpg" height="130px" width="130px" alt="Fanta"></td>
-                <td>Fanta
-                    <ol>
-                        <li>Lattina 0,33L: €0,60</li>                            
-                        <li>Bottiglia 2L: €2,00</li>
-                    </ol>
-                </td>
-                <td><img src="../immagini/logo_sprite.jpg" height="130px" width="130px" alt="Sprite"></td>
-                <td>Sprite
-                    <ol>
-                        <li>Lattina 0,33L: €0,60</li>
-                        <li>Bottiglia 2L: €2,00</li>
-                    </ol>
-                </td>
-            </tr>
-        </table>
-        <h2 align = left class="categoria">Birre:</h2>
-        <table name="birre">
-            <tr>
-                <td><img src="../immagini/logo_heineken.jpg" height="130px" width="130px" alt="Heineken"></td>
-                <td>Heinken
-                     <ol>
-                        <li>Bottiglia 0,33L: €2,00</li>
-                        <li>Bottiglia 0,66L: €3,50</li>
-                    </ol>
-                </td>
-                <td><img src="../immagini/logo_nastro_azzurro.jpg" height="130px" width="130px" alt="Nastro Azzurro"></td>
-                <td>Nastro Azzurro
-                    <ol>
-                        <li>Bottiglia 0,33L: €2,00</li>
-                        <li>Bottiglia 0,66L: €3,50</li>
-                    </ol>
-                </td>
-                <td><img src="../immagini/logo_ichnusa.png" height="130px" width="130px" alt="Ichnusa"></td>
-                <td>Ichnusa
-                    <ol>
-                        <li>Bottiglia 0,33L: €1,50</li>
-                        <li>Bottiglia 0,66L: €3,00</li>
-                    </ol>
-                </td>
-                <td><img src="../immagini/logo_ceres.jpg" height="130px" width="130px" alt="Ceres"></td>
-                <td>Ceres
-                    <ol>
-                        <li>Bottiglia 0,33L: €2,50</li>
-                        <li>Bottiglia 0,66L: €4,00</li>
-                    </ol>
-                </td>
-            </tr>
-        </table>
-        <h2 align=left class="categoria">Altro:</h2>
-        <div name="altro">
-            <ol>
-                <li>Caff&egrave: €0,80</li>
-                <li>Amari, liquori e grappe: €3,00</li>
-            </ol>
-        </div>
+    <body >
+        <div  id="container_principale">
+        <hr style="border-width: 10px;">
+        <h2 style="text-align:left ;" class="categoria">Acqua:</h2>
+        <!--inizio row-->
+        <div class="row" id="loghi_acqua">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_lete.png" alt="Acqua Lete" height="50" width="150" style="position: relative;top: 20px;">
+            </div>
             
+            <div class="col-sm-2">
+                <img src="../immagini/logo_levissima.png" alt="Acqua Lete" height="80" width="180" style="position: relative;bottom: 10px;">
+            </div>
         </div>
-        </div>
-        <div class="col-sm-3"></div>
-        <div class="col-sm-4">
+        <!--fine row-->
+        <br>
+        <!--inizio row-->
+        <div class="row" id="loghi_acqua">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <h6>2L: €1,00</h6>
+                <h6>1L: €0,50</h6>
+                <h6>0,5L: €0,30</h6>
+            </div>
             
-        </div>  <!--AGGIUSTARE IL CSS PER CON LE DIMENSIONI ADATTE DOPO AVER IMPLEMENTATO IL RESTO DELLA PAGINA-->
+            <div class="col-sm-2">
+                <h6>2L:€1,50</h6>
+                <h6>1L: €0,80</h6>
+                <h6>0,5L: €0,50</h6>
+            </div>
         </div>
+        <!--fine row-->
+        
+        <hr style="border-width: 10px;">
+        <h2 style="text-align: left;"class="categoria">Bevande Gassate:</h2>  
+       
+         <!--inizio row-->
+         <div class="row" id="loghi_bevande">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/Coca-Cola_logo.svg" height="150px" width="150px" alt="Coca Cola">
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/Logo_Fanta.png" height="130px" width="130px" alt="Fanta">
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_sprite.png" height="130px" width="160px" alt="Sprite">
+            </div>
+            <div class="col-sm-0"></div>
+            
 
+        </div>
+        <!--fine row-->
+
+        <!--inizio row-->
+        <div class="row" id="prezzi_bevande">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                
+                <h6>Lattina 0,33L: €0,60</h6>
+                <h6>Bottiglia 2L: €2,00 </h6>                        
+                
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                
+                <h6>Lattina 0,33L: €0,60</h6>                            
+                <h6>Bottiglia 2L: €2,00</h6>
+                
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                
+                <h6>Lattina 0,33L: €0,60</h6>
+                <h6>Bottiglia 2L: €2,00</h6>
+                
+            </div>
+            <div class="col-sm-0"></div>
+
+        </div>
+        <!--fine row-->
+        <hr style="border-width: 10px;">
+        <h2 style="text-align: left;" class="categoria">Birre:</h2>
+        <!--inizio row-->
+        <div class="row" id="loghi_birre">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_Heineken.png" height="160px" width="160px" alt="Heineken" style="position: relative;top: 20px;">
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_nastro.png" height="210px" width="210px" alt="Nastro Azzurro">
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_ichnusa.png" height="130px" width="170px" alt="Ichnusa" style="position: relative;top: 30px;">
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <img src="../immagini/logo_ceres.png" height="70px" width="170px" alt="Ceres" style="position: relative;top: 60px;">
+            </div>
+
+        </div>
+        <!--fine row-->
+
+        <!--inizio row-->
+        <div class="row" id="prezzi_birre">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                
+                    <h6>Bottiglia 0,33L: €2,00</h6>
+                    <h6>Bottiglia 0,66L: €3,50</h6>
+                
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                <h6>Bottiglia 0,33L: €2,00</h6>
+                <h6>Bottiglia 0,66L: €3,50</h6>
+                
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                
+                <h6>Bottiglia 0,33L: €1,50</h6>
+                <h6>Bottiglia 0,66L: €3,00</h6>
+                
+            </div>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-2">
+                
+                    <h6>Bottiglia 0,33L: €2,50</h6>
+                    <h6>Bottiglia 0,66L: €4,00</h6>
+                
+            </div>
+
+        </div>
+        <!--fine row-->
+        <hr style="border-width: 10px;">
+       
+        <h2 align=left class="categoria">Altro:</h2>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                <h6>Caff&egrave: €0,80</h6>
+                
+            </div>
+            <div class="col-sm-3">
+                <h6>Amari, liquori e grappe: €3,00</h6>
+            </div>
+            
+        </div>
+            
+        </div>
+        
         <footer></footer>
     </body>
 </html>

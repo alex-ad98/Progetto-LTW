@@ -5,16 +5,7 @@
     width: 400px;
     padding-top: 10px;
 }
-footer::before{
-    position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(78, 85, 85, 0.65);
-  color: white;
-  text-align: center;
-  content: "copyright - autori: Tommaso e Alessandro - proggetto pratico linguaggi e tecnologie per il web";
-}
+
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
@@ -22,10 +13,18 @@ footer::before{
     width: 400px;
 }
 body{
-    background-image: url('./immagini/pizza3.jpg');
-    background-repeat: no-repeat;
-    background-size:cover ;
+    min-height: calc(100vh - 24px);
 }
+
+footer::before{
+    position: relative;
+    text-align: center;
+    background-color: rgba(78, 85, 85, 0.65);
+    color: white;
+    content: "copyright - autori: Tommaso e Alessandro - proggetto pratico linguaggi e tecnologie per il web";
+    
+}
+
 #titolo{
     text-align: center;
     color: rgb(255, 255, 255); 
@@ -36,6 +35,11 @@ body{
 #homepage-row{
     background-color: rgba(78, 85, 85, 0.85);
 }
+.row{
+    max-width: 110%;
+    margin-right: 0;
+}
 .sottotitolo{
-    color: rgb(211, 11, 11);
+    color: rgb(15, 15, 15)
+    ;
 }      
