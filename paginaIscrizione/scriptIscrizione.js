@@ -5,6 +5,13 @@ function validaFormIscrizione(){
         document.formIscrizione.checkPassword.value = "";
         return false;
     }
-    alert("Registrazione effettuata correttamente"); //Valutare se mantenerlo o toglierlo 
+    return true;
+}
+
+function validaPassword(){ //da completare
+    if (document.formIscrizione.inputPassword.length < 6) {
+        alert("La password deve contenere almeno 6 caratteri");
+        return false;
+    }
     return true;
 }
