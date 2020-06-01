@@ -6,7 +6,7 @@
         <meta name="author" content="Alessandro De Vitis">
         <meta name="author" content="Tommaso Ercoli">
         <link rel="icon" href="../immagini/logo_sapienza.ico" />
-        <title>NOME-PIZZERIA | Iscrizione</title>
+        <title>SapienPIZza | Iscrizione</title>
         <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../stili.css" lang="css" type="text/css">
         <style>

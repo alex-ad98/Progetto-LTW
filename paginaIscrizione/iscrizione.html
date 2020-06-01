@@ -8,7 +8,7 @@
     <meta name="author" content="Alessandro De Vitis">
     <meta name="author" content="Tommaso Ercoli">
     <link rel="icon" href="../immagini/logo_sapienza.ico" />
-    <title>NOME-PIZZERIA | Iscriviti</title>
+    <title>SapienPIZza | Iscriviti</title>
     <script type="text/javascript" lang="javascript" src="scriptIscrizione.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stili.css" lang="css" type="text/css">
@@ -19,17 +19,15 @@
         background-size:cover ;
         width: 100%;
       }
-      .asterisco{
+      .rosso{
         color:red;
       }
-      
     </style>
   </head>
 
   <body >
-    <!-- Barra Navigazione --> <!--DA COMPLETARE-->
+    <!-- Barra Navigazione -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-      
       <!-- Links -->
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -44,10 +42,6 @@
         <li class="nav-item">
           <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../paginaLogin/login.html">Accedi</a>
-        </li>
-          
       </ul>
     </nav>
 
@@ -55,24 +49,26 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-4">
     <div class="container-fluid my-3 bg-dark text-white">
-    <h3 class="text-center">Iscriviti ora al nostro sito</h3>
+      <h5 class="text-center">Ti sei gi&agrave registrato?<a href="../paginaLogin/login.html"> Accedi ora!</a></h5>
+    <h3 class="text-center">Iscriviti ora a Sapien<span class="rosso">PIZ</span>za</h3>
       <form class="form-signin" action="iscrizione.php" method="POST" id="signup" name="formIscrizione" onSubmit="return validaFormIscrizione()">
-            
           <label for="email" class="label">
-            <span class="asterisco">*</span> Indirizzo Email:
+            <span class="rosso">*</span> Indirizzo Email:
           </label><br>
           <input type="email" id="email" name="inputEmail" placeholder="Inserisci un indirizzo Email" class="form-control" required autofocus>
           <label for="password">
-            <span class="asterisco">*</span> Password:
+            <span class="rosso">*</span> Password:
           </label><br>
-          <input type="password" id="password" name="inputPassword" placeholder="Scegli una Password" class="form-control" onChange="return validaPassword()" required>
-          <input type="password" id="checkpsw" name="checkPassword" placeholder="Conferma la Password" class="form-control" required> 
+          <input type="password" id="password" name="inputPassword" placeholder="Scegli una Password" class="form-control" 
+                  onChange="return validaPassword()" title="La password deve contenere almeno 8 caratteri"required>
+          <input type="password" id="checkpsw" name="checkPassword" placeholder="Conferma la Password" class="form-control" required>
+          <input type="checkbox" onclick="mostraPassword()"> Mostra le password <br>
           <label for="name">
-            <span class="asterisco">*</span> Nome:
+            <span class="rosso">*</span> Nome:
           </label><br>
           <input type="text" name="nome" id="name" placeholder="Inserisci il tuo Nome" class="form-control" required> 
           <label for="surname">
-            <span class="asterisco">*</span> Cognome:
+            <span class="rosso">*</span> Cognome:
           </label><br>
           <input type="text" name="cognome" id="surname" placeholder="Inserisci il tuo Cognome" class="form-control" required>
           <label for="tel">Telefono:</label><br>
@@ -88,14 +84,15 @@
               </div> 
             </div>
           </div>  
-          <p>I campi contrassegnati da <span class="asterisco">*</span> sono obbligatori</p>
-                   
+          <br>
+          <p>I campi contrassegnati da <span class="rosso">*</span> sono obbligatori</p>
+          <br>         
       </form>
     </div>
     </div>
     </div>
     
-    <div class="page-footer fixed-bottom text-center " id="footer"></div>
+    <div class="page-footer aligned-bottom text-center " id="footer"></div>
     
   </body>
   

@@ -16,9 +16,8 @@
 
 .page-footer::after{
     width: 100%;
-    
     color: white;
-    content: "copyright - autori: Tommaso e Alessandro - proggetto pratico linguaggi e tecnologie per il web";
+    content: "SapienPIZza - Progetto pratico del corso linguaggi e tecnologie per il web - Autori: Tommaso Ercoli ed Alessandro De Vitis - Maggio 2020";
     
 }
 #footer{
@@ -40,6 +39,6 @@
     margin-right: 0;
 }
 .sottotitolo{
-    color: rgb(15, 15, 15)
-    
+    color: red;
+    font-weight: 700;
 }      

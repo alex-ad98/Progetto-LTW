@@ -1,6 +1,20 @@
 <html>
     <head>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="author" content="Alessandro De Vitis">
+        <meta name="author" content="Tommaso Ercoli">
+        <link rel="icon" href="../immagini/logo_sapienza.ico" />
+        <title>SapienPIZza | Accesso</title>
+        <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../stili.css" lang="css" type="text/css">
+        <style>
+            body{
+                background-image: url('../immagini/pizza9.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
     </head>
     <body>
         <?php

@@ -2,7 +2,7 @@
 
 <html lang="it">
     <head>
-        <title>NOME-PIZZERIA | Prenota</title>
+        <title>SapienPIZza | Prenota</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <meta name="author" content="Alessandro De Vitis">
@@ -37,9 +37,6 @@
           <li class="nav-item">
             <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../paginaIscrizione/iscrizione.html">Iscriviti</a>
-          </li>
         </ul>
       </nav>
 
@@ -65,10 +62,10 @@
             </div>
             <div class="form-row">
               <div class="col-sm-8">
-                  <input type="date" name="data" required class="form-control">
+                  <input type="date" name="data" required class="form-control" value="">
               </div>
               <div class="col-sm-4">                  
-                  <input type="time" name="ora" required class="form-control ">
+                  <input type="time" name="ora" required class="form-control " value="19:30">
                   <br>
                 </div>
             </div>
@@ -77,15 +74,15 @@
             </label>
             <div class="form-row">
               <div class="col-sm-6">
-                <input type="number" name="numeroPosti" required class="form-control">
+                <input type="number" name="numeroPosti" required class="form-control" value="0">
               </div>
             </div>
           
             <br>
-            <label for="nome e cognome">
-              <span class="asterisco">*</span> Nome e Cognome:
+            <label for="nominativo">
+              <span class="asterisco">*</span> Nominativo:
             </label><br>
-            <input type="text" name="nome e cognome" id="name" placeholder="Inserisci il tuo Nome e il tuo Cognome" class="form-control" autofocus required>
+            <input type="text" name="nominativo" id="name" placeholder="Inserisci il Nominativo" class="form-control" autofocus required>
             <label for="tel">Telefono:</label><br>
             <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
             <div class="row">
@@ -104,7 +101,7 @@
           </div>
       </div>
           </form>
-          <div class="page-footer fixed-bottom text-center " id="footer"></div>
+          <div class="page-footer aligned-bottom text-center " id="footer"></div>
     </body>
     
 </html>
