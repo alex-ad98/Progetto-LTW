@@ -14,5 +14,12 @@ create table utenti(
     telefono varchar(13)
 )
 
+create table prenotazioni(
+	data_e_ora varchar(25) not null,
+	quantita int not null,
+	nomintativo varchar(50) not null,
+	telefono varchar(13)
+)
+
 
 
