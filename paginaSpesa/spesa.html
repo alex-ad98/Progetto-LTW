@@ -9,15 +9,38 @@
         <link rel="icon" href="../immagini/logo_sapienza.ico" />
         <link rel="stylesheet" href="../bootstrap-4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../stili.css" lang="css" type="text/css">
+        <script src="../vue.min.js" type="text/javascript"></script>
+      
         <style>
           body{
             background-image: url('../immagini/pizza0.jpg');
             background-repeat: no-repeat;
-            background-size:cover ;
+            background-size: cover;          
           }
+
+          #photo{
+              border-radius: 20px;
+              padding: 10px;
+          }
+          .categoria{
+              color:rgb(15,15,15);
+              padding-left: 2%;
+              text-align: center;
+          }
+          hr{
+              border-width: 10px;
+          }
+          .scroll { 
+              background-color: rgb(97, 102, 102, 0.85);
+              height: 500px;
+              overflow: auto; 
+              text-align:center; 
+              color: white;
+          }
+            
         </style>
     </head>
-    <body>
+    <body >
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
           <!-- Links -->
           <ul class="navbar-nav">
@@ -38,7 +61,352 @@
             </li>
           </ul>  
         </nav>
-
-        <div class="page-footer fixed-bottom text-center " id="footer"></div>
+        <h1 class="text-center text-white">Clicca le portate per aggiungerle al carrello</h1>
+       <div id ="app">
+       <div class="row" ><!--row principale-->
+         <div class="col-sm-4" id="bevande">
+          <div class="scroll">
+          <h2 class="categoria">Bevande:</h2>
+           <div class="row">
+             <div class="col-sm-6">
+              <img src="../immagini/logo_lete.png" alt="Acqua Lete" height="50" width="150" style="position: relative;top: 20px;">
+             </div>
+             <div class="col-sm-6">
+               <img src="../immagini/logo_levissima.png" alt="Levissima" height="80" width="180" style="position: relative;bottom: 10px;">
+             </div>
+           </div>
+           <div class="row">
+            <div class="col-sm-6">
+              <button v-on:click="updateTotal(1)" type="button" class="btn btn-dark">2L: €1,00</button>
+              <button v-on:click="updateTotal(0.5)" type="button" class="btn btn-dark"> 1L: €0,50 </button>
+              <button v-on:click="updateTotal(0.3)"type="button" class="btn btn-dark">0,5L: €0,30</button>
+              </div>
+            <div class="col-sm-6">
+              <button v-on:click="updateTotal(1.5)" type="button" class="btn btn-dark">2L:€1,50</button> 
+              <button v-on:click="updateTotal(0.8)" type="button" class="btn btn-dark">1L: €0,80</button> 
+               <button v-on:click="updateTotal(0.5)" type="button" class="btn btn-dark">0,5L: €0,50</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="../immagini/Coca-Cola_logo.svg" height="150px" width="150px" alt="Coca Cola">
+          </div>
+          
+          <div class="col-sm-6">
+              <img src="../immagini/Logo_Fanta.png" height="130px" width="130px" alt="Fanta">
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">                  
+              <button v-on:click="updateTotal(0.6)" type="button" class="btn btn-dark">Lattina 0,33L: €0,60</button> 
+              <button v-on:click="updateTotal(2)" type="button" class="btn btn-dark">Bottiglia 2L: €2,00 </button> 
+          </div>            
+          <div class="col-sm-6">                
+              <button v-on:click="updateTotal(0.6)" type="button" class="btn btn-dark">Lattina 0,33L: €0,60</button> 
+              <button v-on:click="updateTotal(2)" type="button" class="btn btn-dark">Bottiglia 2L: €2,00</button> 
+          </div>     
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="../immagini/logo_sprite.png" height="130px" width="160px" alt="Sprite">
+          </div>
+            <div class="col-sm-6">
+              <img src="../immagini/logo_Heineken.png" height="160px" width="160px" alt="Heineken" >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6"><button v-on:click="updateTotal(0.60)" type="button" class="btn btn-dark">Lattina 0,33L: €0,60</button> 
+              <button v-on:click="updateTotal(2)" type="button" class="btn btn-dark">Bottiglia 2L: €2,00</button> </div>
+              <div class="col-sm-6 ">                  
+                <button v-on:click="updateTotal(2)" type="button" class="btn btn-dark">Bottiglia 0,33L: €2,00</button> 
+                <button v-on:click="updateTotal(3.5)" type="button" class="btn btn-dark">Bottiglia 0,66L: €3,50</button> 
+            </div>              
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6"><img src="../immagini/logo_nastro.png" height="210px" width="210px" alt="Nastro Azzurro"></div>
+            <div class="col-sm-6"><img src="../immagini/logo_ichnusa.png" height="130px" width="170px" alt="Ichnusa" style="position: relative;top: 30px;"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <button type="button" v-on:click="updateTotal(2)" class="btn btn-dark">Bottiglia 0,33L: €2,00</button> 
+              <button type="button" v-on:click="updateTotal(3.5)" class="btn btn-dark">Bottiglia 0,66L: €3,50</button> 
+          </div>          
+          <div class="col-sm-6">                  
+              <button type="button" v-on:click="updateTotal(1.5)" class="btn btn-dark">Bottiglia 0,33L: €1,50</button>
+              <button type="button" v-on:click="updateTotal(3)" class="btn btn-dark">Bottiglia 0,66L: €3,00</button>
+          </div>             
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6"><img src="../immagini/logo_ceres.png" height="70px" width="170px" alt="Ceres" style="position: relative;top: 60px;"></div>
+            <div class="col-sm-6">                  
+              <div class="row ml-2 pt-5">
+                <button type="button"  v-on:click="updateTotal(0.8)"class="btn btn-dark">Caff&egrave: €0,80</button> 
+              </div>
+              <div class="row "></div>
+              <button type="button"  v-on:click="updateTotal(3)" class="btn btn-dark">Amari, liquori e grappe: €3,00</button> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6"> <button v-on:click="updateTotal(2.5)" type="button" class="btn btn-dark">Bottiglia 0,33L: €2,50</button> 
+              <button type="button" v-on:click="updateTotal(4)" class="btn btn-dark">Bottiglia 0,66L: €4,00</button>  </div>
+            <div class="col-sm-6"></div>
+          </div>                  
+        </div>
+         </div>
+         <!--ANTIPASTI-->
+         <div class="col-sm-4" id="antipasti">
+          <div class="scroll">
+            <h2 class="categoria">Antipasti:</h2>
+            <!--inizio row-->
+            <div class="row pt-2">                
+                <div class="col-sm-6" class="elemento">
+                    <h5>Patatine</h5>
+                </div>
+                <div class="col-sm-6" class="elemento">
+                    <h5>Supplì</h5>
+                </div>
+            </div>
+            <div class="row pt-2">
+                
+              <div class="col-sm-6">
+                  <img src="../immagini/patatine.jpg" alt="Patatine" height="140px" width="160px">
+              </div>
+              <div class="col-sm-6">
+                  <img src="../immagini/suppli.png" alt="Supplì" height="140px" width="160px">
+              </div>
+            </div>
+            <div class="row pt-2">
+                
+              <div class="col-sm-6">
+                  <button v-on:click="updateTotal(3)" type="button" class="btn btn-dark">3€</button> 
+              </div>
+              <div class="col-sm-6">
+                  <button v-on:click="updateTotal(1.5)" type="button" class="btn btn-dark">1,50€</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Bruschette</h5>
+                </div>
+                <div class="col-sm-6">
+                  <h5>Tagliere</h5>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/bruschetta.png" alt="Bruschette" height="140px" width="140px">
+            </div>
+            <div class="col-sm-6">
+                <img src="../immagini/tagliere.png" alt="Tagliere" height="100px" width="160px" style="position: relative;top: 10px;">
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(2)" type="button" class="btn btn-dark">2€</button> 
+            </div>
+            <div class="col-sm-6">
+                <button v-on:click="updateTotal(6)" type="button" class="btn btn-dark">6€</button> 
+            </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                <h5>Fritto misto</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/fritti.png" alt="Fritto misto" height="120px" width="200px" >
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(5)" type="button" class="btn btn-dark">5€</button> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FINE ANTIPASTI-->
+        <!--PIZZE-->
+         <div class="col-sm-4 " id="pizze">
+          <div class="scroll">   
+            <!--inizio row-->
+            <h2 class="categoria">Pizze:</h2>
+            <h2 class="categoria">Base bianca:</h2>
+            <div class="row">
+                <div class="col-sm-6">
+                    
+                      <h5>Wurstel e patate</h5>
+                </div>
+                <div class="col-sm-6">
+                    
+                      <h5>Funghi</h5>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/wurstel_patate.png" alt="Wurstel e patate" width="150px" height="150px">
+              </div>
+              <div class="col-sm-6">
+                <img src="../immagini/funghi_bianca.png" alt="Funghi" width="150px" height="150px">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(6.5)" type="button" class="btn btn-dark">6,50€</button>
+              </div>
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(6.5)" type="button" class="btn btn-dark">6,50€</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                
+                  <h5>Rucola e pachino</h5>
+              </div>
+              <div class="col-sm-6">
+                  
+                    <h5>Crostino</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/rucola a pachino.png" alt="Rucola e pachino" width="150px" height="150px">
+            </div>
+            <div class="col-sm-6">
+                <img src="../immagini/crostino.png" alt="Crostino" width="150px" height="150px">
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(6)" type="button" class="btn btn-dark">6€</button>
+              </div>
+              <div class="col-sm-6">
+                <button v-on:click="updateTotal(7)" type="button" class="btn btn-dark">7€</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                
+                  <h5>Patate e salsiccia</h5>
+              </div>
+              <div class="col-sm-6">
+                
+                  <h5>4 Formaggi</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><img src="../immagini/salsiccia-patate.png" alt="Patate e salsiccia" width="150px" height="150px"></div>
+              <div class="col-sm-6"><img src="../immagini/formaggi.png" alt="4 Formaggi" width="150px" height="150px"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><button  v-on:click="updateTotal(7.5)"type="button" class="btn btn-dark">7,50€</button></div>
+              <div class="col-sm-6">  <button v-on:click="updateTotal(7)" type="button" class="btn btn-dark">7€</button></div>
+            </div>
+            <hr>
+            
+            <h2 class="categoria">Base rossa:</h2>    
+            <div class="row">
+              <div class="col-sm-6">
+              <h5>Margherita</h5>
+              </div>
+              <div class="col-sm-6">
+              <h5>Diavola</h5>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><img src="../immagini/margherita.png" alt="Margherita" width="190px" height="160px"></div>
+              <div class="col-sm-6"><img src="../immagini/diavola.png" alt="Diavola" width="150px" height="150px"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(5)" class="btn btn-dark">5€</button>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(6)" class="btn btn-dark">6€</button>
+            </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+               <h5>Boscaiola</h5>
+              </div>
+              <div class="col-sm-6"> 
+                <h5>Wurstel</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/boscaiola.png" alt="Boscaiola" width="150px" height="150px">
+            </div>
+            <div class="col-sm-6">
+                <img src="../immagini/wurstel.png" alt="Wurstel" width="150px" height="150px">
+            </div>1
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(7.5)" class="btn btn-dark">7,50€</button>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(6.5)" class="btn btn-dark">6,50€</button>
+            </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6">
+                <h5>Capricciosa</h5>
+              </div>
+              <div class="col-sm-6">
+                <h5>Gamberetti</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="../immagini/capricciosa.png" alt="Capricciosa" width="150px" height="140px">
+            </div>
+            <div class="col-sm-6">
+                <img src="../immagini/gamberetti.png" alt="Gamberetti" width="150px" height="150px">
+                
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(7.5)" class="btn btn-dark">7,50€</button>
+            </div>
+            <div class="col-sm-6">
+                <button type="button" v-on:click="updateTotal(7)"class="btn btn-dark">7€</button>
+            </div>
+            </div>            
+          </div>
+        </div>
+         <!--FINE PIZZE-->
+        
+       </div><!--row principale-->
+       
+       <div class="row text-center">
+         <div class="col-sm-2"></div>
+         <div class="col-sm-8">
+          <h1 class="text-center"><span class="badge badge-dark text-wrap ">Totale({{total}})€</span></h1>
+          <button v-on:click="resetTotal()"class="text btn btn-md btn-danger"><h2>Reset</h2></button>
+         </div>
+         <div class="col-sm-2"></div>
+       </div>
+      </div> 
+       <br>
+      
+       <!--<h1 class="text-center"><span class="badge badge-secondary">Totale({{totale}})€</span></h1>-->
+       
+        
+       
+       
+      <div class="page-footer fixed-bottom text-center " id="footer"></div>
+      <script type="text/javascript" src="./spesa.js"></script>
     </body>
 </html>
