@@ -45,7 +45,7 @@
       <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
-          <div class="container-fluid rounded p-3 my-3 bg-dark text-white">
+          <div class="container-fluid rounded p-3 my-3 bg-dark text-white ">
           <h3 class="text-center">Prenota il tuo tavolo</h3>
           <form class="form-signin" action="" method="POST" name="formPrenotazione" onSubmit="return validaFormPrenotazione()">
             <div class="form-row">
@@ -57,29 +57,47 @@
             
             </div>
             <div class="form-row">
-              <div class="col-sm-6">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
                   <input type="datetime-local" name="data" required class="form-control" value="">
               </div>
-             
+            <div class="col-sm-1"></div>
             </div>
-            <label for="numeroPosti">
-              Quante persone?
-            </label>
+            <div >
+              <label  for="numeroPosti">
+                Quante persone?
+              </label>
+            </div>
             <div class="form-row">
-              <div class="col-sm-6">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
                 <input type="number" name="numeroPosti" required class="form-control" value="0">
               </div>
+              <div class="col-sm-1"></div>
             </div>
           
             <br>
             <label for="nominativo">
               <span class="asterisco">*</span> Nominativo:
             </label><br>
-            <input type="text" name="nominativo" id="name" placeholder="Inserisci il Nominativo" class="form-control" autofocus required>
+            <div class="form-row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+              <input type="text" name="nominativo" id="name" placeholder="Inserisci il Nominativo" class="form-control" autofocus required>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
             <label for="tel">Telefono:</label><br>
-            <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
-            <div class="row">
-              <div class="col-sm-3"></div>
+            <div class="form-row">            
+              
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10">
+              <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-4"></div>
               <div class="col-sm-8">
             <div class="btn-group">
                   <button class="btn btn-info" type="submit" >Prenota</button>
@@ -89,7 +107,7 @@
                 </div> 
               </div>
             </div>  
-            <p>I campi contrassegnati da <span class="asterisco">*</span> sono obbligatori</p>
+            <p class="text-center">I campi contrassegnati da <span class="asterisco">*</span> sono obbligatori</p>
           </div>
           </div>
       </div>
