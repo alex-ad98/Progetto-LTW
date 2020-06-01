@@ -65,7 +65,7 @@
             </div>
             <div >
               <label  for="numeroPosti">
-                Quante persone?
+                <span class="asterisco">*</span>Quante persone?
               </label>
             </div>
             <div class="form-row">
@@ -87,12 +87,12 @@
               </div>
               <div class="col-sm-1"></div>
             </div>
-            <label for="tel">Telefono:</label><br>
+            <label for="tel"><span class="asterisco">*</span>Telefono:</label><br>
             <div class="form-row">            
               
               <div class="col-sm-1"></div>
               <div class="col-sm-10">
-              <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
+              <input type="text" name="telefono" id="tel" placeholder="Inserisci un numero di Telefono" required class="form-control" pattern="(\+[1234567890]{2} ?)?([1234567890]{9,10})"> <br> <!--regex basata su telefoni italiani-->
               </div>
               <div class="col-sm-1"></div>
             </div>
