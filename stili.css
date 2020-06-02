@@ -5,15 +5,12 @@
     width: 400px;
     padding-top: 10px;
 }
-
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
     height: 280px;
     width: 400px;
 }
-
-
 .page-footer::after{
     width: 100%;
     color: white;
@@ -23,8 +20,11 @@
 #footer{
     background-color:rgba(78, 85, 85, 0.85) ;
 }
-
 #titolo{
+    text-align: center;
+    color: rgb(255, 255, 255); 
+}
+#sotto{
     text-align: center;
     color: rgb(255, 255, 255); 
 }
@@ -41,4 +41,8 @@
 .sottotitolo{
     color: red;
     font-weight: 700;
-}      
+}     
+
+a:visited{color: rgb(0,255,0); /*verde se visitato*/}
+a:hover{color: rgb(16, 202, 248); /*azzurro al passaggio del mouse*/}
+a:active{color: rgb(0,0,255);/*blu se attivo*/}

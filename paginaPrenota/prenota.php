@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../stili.css" lang="css" type="text/css">
         <style>
             body{
-                background-image: url('../immagini/pizza4.jpg');
+                background-image: url('../immagini/pizza8.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -30,9 +30,6 @@
                     <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
                 </li>
              </ul>
@@ -41,16 +38,11 @@
         <?php
             $db_conn = pg_connect("host=localhost port=5432 dbname=LTW_Progetto_Pizzeria user=postgres password=uZ3Mx8") 
                         or die('Connessione al database fallita: ' . pg_last_error());
-            if(!(isset($_POST['bottoneIscrizione']))){ header("Location:../homepage.html"); }
+            if(!(isset($_POST['bottonePrenota']))){ header("Location:../homepage.html"); }
             else{
-                $email = $_POST['inputEmail'];
-                $q0 = "select * from utenti where email=$1";
-                $risultato0 = pg_query_params($db_conn, $q0, array($email));
-                if($line = pg_fetch_array($risultato0, null, PGSQL_ASSOC)){
-                    echo "<h2>L'indirizzo email inserito risulta già registrato </h2>
-                          <a href=../paginaLogin/login.html>Clicca qui per effettuare l'accesso </a>";
-                }
-                else{
+                $data = $_POST['data'];
+                
+                
                     $password = md5($_POST['inputPassword']);
                     $nome = $_POST['nome'];
                     $cognome = $_POST['cognome'];
@@ -58,10 +50,10 @@
                     $q1 = "insert into utenti values ($1, $2, $3, $4, $5)";
                     $risultato1 = pg_query_params($db_conn, $q1, array($email, $password, $nome, $cognome, $telefono));
                     if($risultato1){
-                        echo "<h2> Registrazione completata con successo</h2> <br>
-                            <a href=../sconto.php?name=$nome&email=$email> Ottieni il tuo codice di sconto </a>";
+                        echo "<h2> Registrazione completata </h2> <br>
+                            <a href=../homepage.html?name=$nome> Torna alla Homepage </a>";
                     }
-                }
+                
             }
         ?>
         <div class="page-footer fixed-bottom text-center " id="footer"></div>

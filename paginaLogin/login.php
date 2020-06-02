@@ -17,6 +17,24 @@
         </style>
     </head>
     <body>
+        <!-- Barra Navigazione --> 
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+            <!-- Links -->
+             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
+                </li>
+             </ul>
+        </nav>
         <?php
             $db_conn = pg_connect("host=localhost port=5432 dbname=LTW_Progetto_Pizzeria user=postgres password=uZ3Mx8")
                         or die('Connessione al database fallita: ' . pg_last_error());
@@ -42,11 +60,12 @@
                     else{
                         $nome = $tupla1['nome'];
                         echo "<h2>Benvenuto $nome</h2>
-                        <a href=../homepage.html?name=$nome>Torna alla Homepage</a>";
+                        <a href=../sconto.php?name=$nome&email=$email>Ottieni il tuo codice di sconto</a>";
                     }
                 }
             }     
         ?>
+        <div class="page-footer fixed-bottom text-center " id="footer"></div>
     </body>
 
 </html>
