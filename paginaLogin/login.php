@@ -18,23 +18,32 @@
     </head>
     <body>
         <!-- Barra Navigazione --> 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-            <!-- Links -->
-             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../homepage.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../paginaMenu/menu.html">Men&ugrave;</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../paginaPrenota/prenota.html">Prenota</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../paginaSpesa/spesa.html">Quanto spenderai?</a>
-                </li>
-             </ul>
-        </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-nowrap">
+        <div class="navbar-toggler mr-2">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+        <span class="navbar-brand w-100"><img src="/immagini/SapienPizza_Trasp.png" width="150px" height="60px"></span>
+        <div class="navbar-collapse collapse w-100 justify-content-center" id="navbar5">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/paginaMenu/menu.html">Men&ugrave;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/paginaPrenota/prenota.html">Prenota</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/paginaSpesa/spesa.html">Quanto spenderai?</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar navbar-collapse w-100 justify-content-end">
+          
+        </div>
+    </nav>
+       
         <?php
             $db_conn = pg_connect("host=localhost port=5432 dbname=LTW_Progetto_Pizzeria user=postgres password=uZ3Mx8")
                         or die('Connessione al database fallita: ' . pg_last_error());
@@ -59,8 +68,10 @@
                     }
                     else{
                         $nome = $tupla1['nome'];
-                        echo "<h2>Benvenuto $nome</h2>
-                        <a href=../sconto.html?name=$nome>Ottieni il tuo codice di sconto</a>";
+                        echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                            <h2>Benvenuto $nome</h2>
+                            <a href=../sconto.html?name=$nome style=\"font-size:16px;\" class=\"badge badge-dark\">Ottieni il tuo codice di sconto</a>
+                            </div>";
                     }
                 }
             }     

@@ -47,8 +47,10 @@
                 $q0 = "select * from utenti where email=$1";
                 $risultato0 = pg_query_params($db_conn, $q0, array($email));
                 if($line = pg_fetch_array($risultato0, null, PGSQL_ASSOC)){
-                    echo "<h2>L'indirizzo email inserito risulta già registrato </h2>
-                          <a href=../paginaLogin/login.html>Clicca qui per effettuare l'accesso </a>";
+                    echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                            <h2>L'indirizzo email inserito risulta già registrato </h2> <br>
+                            <a href=../paginaLogin/login.html style=\"font-size:16px;\" class=\"badge badge-dark\">Clicca qui per effettuare l'accesso</a>
+                            </div>";
                 }
                 else{
                     $password = md5($_POST['inputPassword']);
@@ -58,8 +60,10 @@
                     $q1 = "insert into utenti values ($1, $2, $3, $4, $5)";
                     $risultato1 = pg_query_params($db_conn, $q1, array($email, $password, $nome, $cognome, $telefono));
                     if($risultato1){
-                        echo "<h2> Registrazione completata con successo</h2> <br>
-                            <a href=../sconto.html?name=$nome&email=$email> Ottieni il tuo codice di sconto </a>";
+                        echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                            <h2> Registrazione completata con successo</h2> <br>
+                            <a href=../sconto.html?name=$nome style=\"font-size:16px;\" class=\"badge badge-dark\">Ottieni il tuo codice di sconto</a>
+                            </div>";
                     }
                 }
             }
