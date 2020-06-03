@@ -17,6 +17,9 @@
     content: "SapienPIZza - Progetto pratico del corso linguaggi e tecnologie per il web - Autori: Tommaso Ercoli ed Alessandro De Vitis - Maggio 2020";
     
 }
+.navbar{
+    height: 70px;
+}
 #footer{
     background-color:rgba(78, 85, 85, 0.85) ;
 }
