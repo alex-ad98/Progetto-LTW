@@ -55,16 +55,20 @@
                 $q0 = "select * from utenti where email=$1";
                 $risultato0 = pg_query_params($db_conn, $q0, array($email));
                 if(!($tupla0 = pg_fetch_array($risultato0, null, PGSQL_ASSOC))){
-                    echo "<h2>L'indirizzo email inserito non è associato a nessun account</h2>
-                    <a href=../paginaIscrizione/iscrizione.html> Clicca qui per iscriverti </a>";
+                    echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                        <h2>L'indirizzo email inserito non è associato a nessun account</h2>
+                        <a href=../paginaIscrizione/iscrizione.html style=\"font-size:16px;\" class=\"badge badge-dark\"> Clicca qui per iscriverti </a>
+                        </div>";
                 }
                 else{
                     $password = md5($_POST['inputPassword']);
                     $q1 = "select * from utenti where email = $1 and password = $2";
                     $risultato1 = pg_query_params($db_conn, $q1, array($email, $password));
                     if(!($tupla1 = pg_fetch_array($risultato1, null, PGSQL_ASSOC))){
-                        echo "<h2>La Password inserita è sbagliata</h2>
-                        <a href=login.html>Clicca qui per accedere</a>";
+                        echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                            <h2>La Password inserita è sbagliata</h2>
+                            <a href=login.html style=\"font-size:16px;\" class=\"badge badge-dark\">Clicca qui per accedere</a>
+                            </div>";
                     }
                     else{
                         $nome = $tupla1['nome'];
