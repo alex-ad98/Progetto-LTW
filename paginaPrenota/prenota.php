@@ -50,8 +50,10 @@
                 $q1 = "insert into prenotazioni values ($1, $2, $3, $4)";
                 $risultato1 = pg_query_params($db_conn, $q1, array($data, $quantita, $nominativo, $telefono));
                 if($risultato1){
-                    echo "<h2> Prenotazione effettuata con successo </h2> <br>
-                        <a href=../homepage.html> Torna alla Homepage </a>";
+                    echo "<div class=\"container-fluid pt-2 pb-2 rounded text-center\" style=\"background-color: rgba(177, 189, 189, 0.65);\">
+                            <h2>Prenotazione effettuata con successo</h2> <br>
+                            <a href=../homepage.html style=\"font-size:16px;\" class=\"badge badge-dark\">Torna alla Homepage</a>
+                            </div>";
                 }
             }
         ?>
