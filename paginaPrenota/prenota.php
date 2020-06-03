@@ -41,20 +41,22 @@
             if(!(isset($_POST['bottonePrenota']))){ header("Location:../homepage.html"); }
             else{
                 $data = $_POST['data'];
-                $persone = $_POST[];
-                $nominativo = $_POST[];
-                $telefono = $_POST[];
+                $quantita = $_POST['numeroPosti'];
+                $nominativo = $_POST['nominativo'];
+                $telefono = $_POST['telefono'];
+                $q0 = "select from prenotazioni";
                 
                    
-                    $q1 = "insert into utenti values ($1, $2, $3, $4, $5)";
-                    $risultato1 = pg_query_params($db_conn, $q1, array($email, $password, $nome, $cognome, $telefono));
-                    if($risultato1){
-                        echo "<h2> Registrazione completata </h2> <br>
-                            <a href=../homepage.html?name=$nome> Torna alla Homepage </a>";
-                    }
-                
+                $q1 = "insert into prenotazioni values ($1, $2, $3, $4)";
+                $risultato1 = pg_query_params($db_conn, $q1, array($data, $quantita, $nominativo, $telefono));
+                if($risultato1){
+                    echo "<h2> Prenotazione effettuata con successo </h2> <br>
+                        <a href=../homepage.html> Torna alla Homepage </a>";
+                }
             }
         ?>
+
         <div class="page-footer fixed-bottom text-center " id="footer"></div>
+
     </body>
 </html>

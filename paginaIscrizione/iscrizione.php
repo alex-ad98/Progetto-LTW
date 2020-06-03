@@ -59,7 +59,7 @@
                     $risultato1 = pg_query_params($db_conn, $q1, array($email, $password, $nome, $cognome, $telefono));
                     if($risultato1){
                         echo "<h2> Registrazione completata con successo</h2> <br>
-                            <a href=../sconto.php?name=$nome&email=$email> Ottieni il tuo codice di sconto </a>";
+                            <a href=../sconto.html?name=$nome&email=$email> Ottieni il tuo codice di sconto </a>";
                     }
                 }
             }

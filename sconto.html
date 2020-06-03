@@ -34,8 +34,12 @@
     </script>
     <script>
         var cod = generaCodice();
+        var url_string = window.location.href
+        var url = new URL(url_string);
+        var nome = url.searchParams.get("name");
         window.onload = function () {
             document.getElementById("passaggioCodice").innerHTML = cod;
+            document.getElementById("nomeUtente").innerHTML = nome;
         }
         $(document).ready(function () {
             $("#qrcode").qrcode({
@@ -45,14 +49,6 @@
                 height: 160
             });
         });
-    </script>
-    <script>
-        var url_string = window.location.href
-            var url = new URL(url_string);
-            var nome = url.searchParams.get("name");
-            window.onload = function () {
-                document.getElementById("nomeUtente").innerHTML = nome;
-            }
     </script>
 </head>
 
