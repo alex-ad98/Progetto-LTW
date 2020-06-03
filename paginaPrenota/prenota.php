@@ -41,12 +41,11 @@
             if(!(isset($_POST['bottonePrenota']))){ header("Location:../homepage.html"); }
             else{
                 $data = $_POST['data'];
+                $persone = $_POST[];
+                $nominativo = $_POST[];
+                $telefono = $_POST[];
                 
-                
-                    $password = md5($_POST['inputPassword']);
-                    $nome = $_POST['nome'];
-                    $cognome = $_POST['cognome'];
-                    $telefono = $_POST['telefono'];
+                   
                     $q1 = "insert into utenti values ($1, $2, $3, $4, $5)";
                     $risultato1 = pg_query_params($db_conn, $q1, array($email, $password, $nome, $cognome, $telefono));
                     if($risultato1){

@@ -60,12 +60,14 @@
                     else{
                         $nome = $tupla1['nome'];
                         echo "<h2>Benvenuto $nome</h2>
-                        <a href=../sconto.php?name=$nome&email=$email>Ottieni il tuo codice di sconto</a>";
+                        <a href=../sconto.html?name=$nome>Ottieni il tuo codice di sconto</a>";
                     }
                 }
             }     
         ?>
+
         <div class="page-footer fixed-bottom text-center " id="footer"></div>
+
     </body>
 
 </html>

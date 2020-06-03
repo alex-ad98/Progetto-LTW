@@ -21,10 +21,7 @@ create table prenotazioni(
 	telefono varchar(13)
 )
 
-create table codici_sconto(
-    codice varchar(10) not null,
-    email varchar(50) not null
-)
+
 
 
 
